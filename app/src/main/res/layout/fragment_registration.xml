@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/app_darker"
-    tools:context=".presentation.auth.reg.RegistrationFragment">
+    tools:context=".registr.RegistrationFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -19,11 +19,37 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
+        <TextView
+            android:id="@+id/textNicknameError"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="14dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/et_red100"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/etEmail"
+            app:layout_constraintEnd_toEndOf="@+id/etEmail"
+            app:layout_constraintStart_toStartOf="@+id/etEmail" />
+
+        <TextView
+            android:id="@+id/textEmailError"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="14dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/et_red100"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/etPassword"
+            app:layout_constraintEnd_toEndOf="@+id/etEmail"
+            app:layout_constraintStart_toStartOf="@+id/etEmail" />
+
         <EditText
             android:id="@+id/etNickname"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="2dp"
             android:background="@drawable/gray_stroke_edittext"
             android:drawableLeft="@drawable/ic_nickname"
             android:drawablePadding="12dp"
@@ -36,16 +62,16 @@
             android:paddingBottom="16dp"
             android:textColorHint="#D9D9D9"
             android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/etEmail"
+            app:layout_constraintBottom_toTopOf="@+id/textNicknameError"
             app:layout_constraintEnd_toEndOf="@+id/etPassword"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/etPassword" />
 
         <EditText
             android:id="@+id/etEmail"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="2dp"
             android:background="@drawable/gray_stroke_edittext"
             android:drawableLeft="@drawable/ic_email"
             android:drawablePadding="12dp"
@@ -58,13 +84,13 @@
             android:paddingBottom="16dp"
             android:textColorHint="#D9D9D9"
             android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/etPassword"
+            app:layout_constraintBottom_toTopOf="@+id/textEmailError"
             app:layout_constraintEnd_toEndOf="@+id/etPassword"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/etPassword" />
 
         <Button
-            android:id="@+id/btnGoRoLogin"
+            android:id="@+id/btnGoToLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
@@ -97,11 +123,11 @@
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
             android:textSize="17sp"
-            app:layout_constraintBottom_toBottomOf="@+id/btnGoRoLogin"
+            app:layout_constraintBottom_toBottomOf="@+id/btnGoToLogin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/btnGoRoLogin"
-            app:layout_constraintTop_toTopOf="@+id/btnGoRoLogin" />
+            app:layout_constraintStart_toEndOf="@+id/btnGoToLogin"
+            app:layout_constraintTop_toTopOf="@+id/btnGoToLogin" />
 
         <EditText
             android:id="@+id/etPassword"
@@ -120,9 +146,9 @@
             android:paddingBottom="16dp"
             android:textColorHint="#D9D9D9"
             android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/btnGoRoLogin"
+            app:layout_constraintBottom_toTopOf="@+id/btnGoToLogin"
             app:layout_constraintEnd_toEndOf="@+id/btnSignUp"
-            app:layout_constraintStart_toStartOf="@+id/btnGoRoLogin" />
+            app:layout_constraintStart_toStartOf="@+id/btnGoToLogin" />
 
         <TextView
             android:id="@+id/textView"
@@ -169,8 +195,10 @@
         android:id="@+id/imageView4"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
         android:src="@drawable/chibi_samurai"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"

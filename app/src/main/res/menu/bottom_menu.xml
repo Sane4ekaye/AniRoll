@@ -10,7 +10,7 @@
         android:icon="@drawable/selector_collection"
         android:title="" />
     <item
-        android:id="@+id/historyFragment"
+        android:id="@+id/mainLayout"
         android:icon="@drawable/selector_history"
         android:title="" />
     <item
