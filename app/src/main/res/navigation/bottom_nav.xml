@@ -22,7 +22,7 @@
         tools:layout="@layout/fragment_history" />
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.sane4ek.aniroll.home.HomeFragment"
+        android:name="com.sane4ek.aniroll.home.presentation.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
 </navigation>

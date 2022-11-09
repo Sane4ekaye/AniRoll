@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.sane4ek.aniroll.splash.SplashFragment"
+        android:name="com.sane4ek.aniroll.splash.presentation.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action
@@ -18,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.sane4ek.aniroll.main.MainFragment"
+        android:name="com.sane4ek.aniroll.core.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
@@ -54,17 +54,22 @@
             app:popUpTo="@id/splashFragment"
             app:popUpToInclusive="true" />
     </fragment>
-    <navigation android:id="@+id/navigation3"
-        app:startDestination="@id/mainFragment2">
-        <fragment
-            android:id="@+id/mainFragment2"
-            android:name="com.sane4ek.aniroll.main.MainFragment"
-            android:label="fragment_main"
-            tools:layout="@layout/fragment_main" />
-        <fragment
-            android:id="@+id/collectionFragment2"
-            android:name="com.sane4ek.aniroll.collection.CollectionFragment"
-            android:label="fragment_collection"
-            tools:layout="@layout/fragment_collection" />
-    </navigation>
+    <fragment
+        android:id="@+id/animeFragment"
+        android:name="com.sane4ek.animescreen.AnimeFragment"
+        android:label="fragment_anime"
+        tools:layout="@layout/fragment_anime" >
+        <action
+            android:id="@+id/action_animeFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.sane4ek.aniroll.home.presentation.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_animeFragment"
+            app:destination="@id/animeFragment" />
+    </fragment>
 </navigation>

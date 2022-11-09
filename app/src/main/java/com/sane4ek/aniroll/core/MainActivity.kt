@@ -1,4 +1,4 @@
-package com.sane4ek.aniroll.main
+package com.sane4ek.aniroll.core
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
